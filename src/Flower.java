@@ -46,5 +46,8 @@ public class Flower {
 
     @Override
     public String toString(){
-        return "Цвет цветка"+getFlowerColor()+". Страна изготовитель"+getCountry()+". Цена  "+getCost()+".Сколько стоит в вазе после покупки "+getLifeSpan();}
+        return "Цвет цветка"+getFlowerColor()+". Страна изготовитель"+getCountry()+
+                ". Цена  "+getCost()+".Сколько стоит в вазе после покупки "+getLifeSpan();}
+
 }
+

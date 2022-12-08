@@ -1,6 +1,9 @@
 import static java.awt.Color.red;
+
 import Transport.Car;
 import com.sun.jdi.connect.Transport;
+
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,25 +39,31 @@ public class Main {
         System.out.println(Anya.getName());
         System.out.println(Katya);
         System.out.println(Artem);*/
-
-        Car ladaGranda= new Car("","",0,"",
-                0, "","механика",
-                "купе","123456789", 4,false);
-        Car AudiA8_50LTDI= new Car("Audi","A8  50 L TDI",
-                3,"чёрного цвета", 2020,
-                "Германия","автомат","универсал",
-                "123456789",4,true);
-        Car BMWZ8= new Car("BMW","Z8",3,"чёрного цвета",
-                2018,"Германия",
-                "механика","седан","45454545",
-                4,true);
-        Car KiaSportage= new Car("Kia","Sportage",
-                2.4f,"оранжевого цвета", 2018,
-                "Южная Корея","механика","пикап",
-                "123456789",4,true);
-        Car HuindayAvante= new Car("Huinday","Avante",
-                1.6f,"красного цвета", 2016,
-                "Южная Корея","механика","хетчбэк", "123456789",4,false);
+        Car ladaGranda = new Car("", "", 0, "",
+                0, "", "механика",
+                "купе", "123456789", 4, false,
+                new Transport.Car.Key(true, true),
+                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+        Car AudiA8_50LTDI = new Car("Audi", "A8  50 L TDI",
+                3, "чёрного цвета", 2020,
+                "Германия", "автомат", "универсал",
+                "123456789", 4, true, new Transport.Car.Key(true, true),
+                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+        Car BMWZ8 = new Car("BMW", "Z8", 3, "чёрного цвета",
+                2018, "Германия",
+                "механика", "седан", "45454545",
+                4, true, new Transport.Car.Key(true, true),
+                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+        Car KiaSportage = new Car("Kia", "Sportage",
+                2.4f, "оранжевого цвета", 2018,
+                "Южная Корея", "механика", "пикап",
+                "123456789", 4, true, new Transport.Car.Key(true, true),
+                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+        Car HuindayAvante = new Car("Huinday", "Avante",
+                1.6f, "красного цвета", 2016,
+                "Южная Корея", "механика", "хетчбэк", "123456789",
+                4, false, new Transport.Car.Key(true, true),
+                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
 
         /*Car first= new Car();
         first.brend=" Lada ";
@@ -103,30 +112,33 @@ public class Main {
         System.out.println(KiaSportage);
         System.out.println(HuindayAvante);
 
-        /*Flower Roza=new Flower("","Голландия",35.67f,0);
-        Flower Hrizantema=new Flower("","",15.00f,5);
-        Flower Pion=new Flower("","Англия",69.90f,1);
-        Flower Gipsofila=new Flower("","Турция",19.50f,10);*/
+        Flower Roza = new Flower("", "Голландия", 35.67f, 0);
+        Flower Hrizantema = new Flower("", "", 15.00f, 5);
+        Flower Pion = new Flower("", "Англия", 69.90f, 1);
+        Flower Gipsofila = new Flower("", "Турция", 19.50f, 10);
 
         /*System.out.println(Roza.getFlowerColor());
         Roza.setFlowerColor("зелёный");
         System.out.println(Roza.getFlowerColor());*/
-        //System.out.println(Roza.getCost()*3);
+        System.out.println(Roza.getCost() * 3);
 
+        System.out.println(Bouquet(Roza.getCost(), 4, Hrizantema.getCost(), 7, Pion.getCost(), 2, Gipsofila.getCost(), 2));
         /*System.out.println(Roza);
         System.out.println(Hrizantema);
         System.out.println(Pion);
         System.out.println(Gipsofila);*/
-
-        //System.out.println(Bouquet(3,5,7,6));
     }
-    /*public static float Bouquet(int countRoza, int countHrizantema,int countPion,int countGipsofila){
-        float costRoza = Roza.getCost()*countRoza;
-        float costHrizantema = Hrizantema.getCost()*countHrizantema;
-        float costPion = Pion.getCost()*countPion;
-        float costGipsofila = Gipsofila.getCost()*countGipsofila;
-        float costBouquet=(costGipsofila+costHrizantema+costRoza+costPion)*0.1f+(costGipsofila+costHrizantema+costRoza+costPion);
-        return costBouquet;
-    }*/
+        //System.out.println(Bouquet(3,5,7,6));
 
-}
+    public static float Bouquet(float coastRoza,int countRoza,float coastHrizantema,
+                                int countHrizantema,float coastPion,int countPion,
+                                float coastGipsofila, int countGipsofila){
+        float costRoza = coastRoza*countRoza;
+        float costHrizantema = coastHrizantema*countHrizantema;
+        float costPion = coastPion*countPion;
+        float costGipsofila = coastGipsofila*countGipsofila;
+        float costBouquet=(costGipsofila+costHrizantema+costRoza+costPion)*0.1f+
+                    (costGipsofila+costHrizantema+costRoza+costPion);
+        return  costBouquet;
+        }
+    }
