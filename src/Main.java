@@ -63,7 +63,7 @@ public class Main {
                 1.6f, "красного цвета", 2016,
                 "Южная Корея", "механика", "хетчбэк", "123456789",
                 4, false, new Transport.Car.Key(true, true),
-                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "1234567899"));
 
         /*Car first= new Car();
         first.brend=" Lada ";
