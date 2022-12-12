@@ -42,28 +42,28 @@ public class Main {
         Car ladaGranda = new Car("", "", 0, "",
                 0, "", "механика",
                 "купе", "123456789", 4, false,
-                new Transport.Car.Key(true, true),
-                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+                new Car.Key(true, true),
+                new Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
         Car AudiA8_50LTDI = new Car("Audi", "A8  50 L TDI",
                 3, "чёрного цвета", 2020,
                 "Германия", "автомат", "универсал",
-                "123456789", 4, true, new Transport.Car.Key(true, true),
-                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+                "123456789", 4, true, new Car.Key(true, true),
+                new Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
         Car BMWZ8 = new Car("BMW", "Z8", 3, "чёрного цвета",
                 2018, "Германия",
                 "механика", "седан", "45454545",
-                4, true, new Transport.Car.Key(true, true),
-                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+                4, true, new Car.Key(true, true),
+                new Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
         Car KiaSportage = new Car("Kia", "Sportage",
                 2.4f, "оранжевого цвета", 2018,
                 "Южная Корея", "механика", "пикап",
-                "123456789", 4, true, new Transport.Car.Key(true, true),
-                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
+                "123456789", 4, true, new Car.Key(true, true),
+                new Car.Insurance(LocalDate.EPOCH, 507.7f, "123456789"));
         Car HuindayAvante = new Car("Huinday", "Avante",
                 1.6f, "красного цвета", 2016,
                 "Южная Корея", "механика", "хетчбэк", "123456789",
-                4, false, new Transport.Car.Key(true, true),
-                new Transport.Car.Insurance(LocalDate.EPOCH, 507.7f, "1234567899"));
+                4, false, new Car.Key(true, true),
+                new Car.Insurance(LocalDate.EPOCH, 507.7f, "1234567899"));
 
         /*Car first= new Car();
         first.brend=" Lada ";
@@ -120,15 +120,17 @@ public class Main {
         /*System.out.println(Roza.getFlowerColor());
         Roza.setFlowerColor("зелёный");
         System.out.println(Roza.getFlowerColor());*/
-        System.out.println(Roza.getCost() * 3);
+        //System.out.println(Roza.getCost() * 3);
 
-        System.out.println(Bouquet(Roza.getCost(), 4, Hrizantema.getCost(), 7, Pion.getCost(), 2, Gipsofila.getCost(), 2));
+        //System.out.println(Bouquet(Roza.getCost(), 4, Hrizantema.getCost(), 7, Pion.getCost(), 2, Gipsofila.getCost(), 2));
         /*System.out.println(Roza);
         System.out.println(Hrizantema);
         System.out.println(Pion);
         System.out.println(Gipsofila);*/
+        System.out.println(Bouquet(Roza.getCost(), 4, Hrizantema.getCost(), 0,
+                Pion.getCost(), 2, Gipsofila.getCost(), 0));
     }
-        //System.out.println(Bouquet(3,5,7,6));
+
 
     public static float Bouquet(float coastRoza,int countRoza,float coastHrizantema,
                                 int countHrizantema,float coastPion,int countPion,
